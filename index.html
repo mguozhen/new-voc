@@ -615,6 +615,28 @@ nav {
 }
 .btn-price-pro:hover { background:#4a20ee; transform:translateY(-1px); box-shadow:0 8px 24px rgba(91,47,255,0.35); }
 
+/* ── VIDEO SECTION ── */
+.video-section {
+  padding:6rem 3rem;
+  background:var(--paper);
+  text-align:center;
+}
+.video-title {
+  font-size:clamp(1.6rem,3vw,2.4rem); font-weight:800;
+  letter-spacing:-0.02em; margin-bottom:2.5rem;
+  color:var(--ink); max-width:680px; margin-left:auto; margin-right:auto;
+}
+.video-wrapper {
+  max-width:900px; margin:0 auto;
+  border-radius:20px; overflow:hidden;
+  box-shadow:0 24px 80px rgba(0,0,0,0.12);
+  background:#000;
+}
+.video-wrapper video {
+  width:100%; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
 /* ── WHO IT'S FOR ── */
 .who-for {
   padding:7rem 3rem;
@@ -753,6 +775,23 @@ footer {
         <div class="stat-lbl">Sellers trust us</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     VIDEO DEMO
+     ════════════════════════════════════ -->
+<section class="video-section">
+  <div class="section-eyebrow" style="color:var(--flame)">See It In Action</div>
+  <h2 class="video-title">Watch VOC.ai turn millions of reviews into one clear insight</h2>
+  <div class="video-wrapper">
+    <video
+      src="voc-demo.mp4"
+      controls
+      playsinline
+      preload="metadata"
+      poster=""
+    ></video>
   </div>
 </section>
 
