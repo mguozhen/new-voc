@@ -85,9 +85,19 @@ nav {
 /* ── HERO VOC ── */
 .hero-voc {
   min-height:100vh;
-  display:flex; flex-direction:column; justify-content:center;
-  padding:8rem 3rem 5rem;
+  display:flex; align-items:center;
+  padding:8rem 4rem 5rem;
   position:relative; overflow:hidden;
+}
+.hero-voc-inner {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:3rem; align-items:center;
+  width:100%; max-width:1280px; margin:0 auto;
+  position:relative; z-index:2;
+}
+@media(max-width:900px){
+  .hero-voc-inner { grid-template-columns:1fr; }
+  .hero-video-right { display:none; }
 }
 .hero-voc-bg {
   position:absolute; top:-15%; right:-8%;
@@ -110,7 +120,17 @@ nav {
   background-size:56px 56px;
   mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,black,transparent);
 }
-.hero-voc-content { max-width:820px; position:relative; z-index:2; }
+.hero-voc-content { position:relative; z-index:2; }
+.hero-video-right {
+  position:relative; z-index:2;
+  border-radius:16px; overflow:hidden;
+  box-shadow:0 32px 80px rgba(0,0,0,0.15);
+  background:#000;
+}
+.hero-video-right video {
+  width:100%; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
 .hero-badge {
   display:inline-flex; align-items:center; gap:0.5rem;
   background:var(--ink); color:#fff;
@@ -745,53 +765,46 @@ footer {
 <section class="hero-voc" id="voc">
   <div class="hero-voc-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-voc-content">
-    <div class="hero-badge">
-      🔥 <span class="badge-accent">Largest Amazon Review Database</span> — powering smarter sellers
-    </div>
-    <h1>
-      Know what Amazon shoppers want<br>
-      <span class="grad-flame">before your</span><br>
-      <span class="grad-purple">competitors do</span>
-    </h1>
-    <p class="hero-sub">
-      Use the industry's deepest Amazon review and keyword intelligence to uncover customer pain points, monitor brand reputation, identify policy-violating reviews, and spot product opportunities faster.
-    </p>
-    <div class="hero-ctas">
-      <a class="btn-primary" href="#pricing">Start Free Trial →</a>
-      <a class="btn-outline-dark" href="#features">See How It Works</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">2<span class="ac">B+</span></div>
-        <div class="stat-lbl">Reviews analyzed</div>
+  <div class="hero-voc-inner">
+    <div class="hero-voc-content">
+      <div class="hero-badge">
+        🔥 <span class="badge-accent">Largest Amazon Review Database</span> — powering smarter sellers
       </div>
-      <div>
-        <div class="stat-num">50<span class="ac">M+</span></div>
-        <div class="stat-lbl">Keywords tracked</div>
+      <h1>
+        Know what Amazon shoppers want<br>
+        <span class="grad-flame">before your</span><br>
+        <span class="grad-purple">competitors do</span>
+      </h1>
+      <p class="hero-sub">
+        Use the industry's deepest Amazon review and keyword intelligence to uncover customer pain points, monitor brand reputation, identify policy-violating reviews, and spot product opportunities faster.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#pricing">Start Free Trial →</a>
+        <a class="btn-outline-dark" href="#features">See How It Works</a>
       </div>
-      <div>
-        <div class="stat-num">12<span class="ac">K+</span></div>
-        <div class="stat-lbl">Sellers trust us</div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">2<span class="ac">B+</span></div>
+          <div class="stat-lbl">Reviews analyzed</div>
+        </div>
+        <div>
+          <div class="stat-num">50<span class="ac">M+</span></div>
+          <div class="stat-lbl">Keywords tracked</div>
+        </div>
+        <div>
+          <div class="stat-num">12<span class="ac">K+</span></div>
+          <div class="stat-lbl">Sellers trust us</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-     VIDEO DEMO
-     ════════════════════════════════════ -->
-<section class="video-section">
-  <div class="section-eyebrow" style="color:var(--flame)">See It In Action</div>
-  <h2 class="video-title">Watch VOC.ai turn millions of reviews into one clear insight</h2>
-  <div class="video-wrapper">
-    <video
-      src="voc-demo.mp4"
-      controls
-      playsinline
-      preload="metadata"
-      poster=""
-    ></video>
+    <div class="hero-video-right">
+      <video
+        src="voc-demo.mp4"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
   </div>
 </section>
 
