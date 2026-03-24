@@ -615,30 +615,55 @@ nav {
 }
 .btn-price-pro:hover { background:#4a20ee; transform:translateY(-1px); box-shadow:0 8px 24px rgba(91,47,255,0.35); }
 
+/* ── WHO IT'S FOR ── */
+.who-for {
+  padding:7rem 3rem;
+  background:var(--paper);
+}
+.who-for-title {
+  font-size:clamp(2rem,4vw,3rem); font-weight:900;
+  letter-spacing:-0.03em; margin-bottom:3rem; color:var(--ink);
+}
+.who-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.25rem;
+  max-width:960px;
+}
+@media(max-width:900px){ .who-grid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .who-grid{ grid-template-columns:1fr; } }
+.who-card {
+  background:var(--mist); border-radius:16px;
+  padding:1.8rem 1.6rem;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.who-card:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(0,0,0,0.07); }
+.who-icon { font-size:1.8rem; margin-bottom:0.9rem; }
+.who-card h4 { font-size:1rem; font-weight:700; margin-bottom:0.5rem; color:var(--ink); }
+.who-card p { font-size:0.88rem; color:var(--slate); line-height:1.6; }
+
 /* ── CTA ── */
 .cta-final {
-  background:var(--ink); color:#fff;
+  background:var(--mist); color:var(--ink);
   padding:8rem 3rem; text-align:center;
   position:relative; overflow:hidden;
 }
-.cta-glow {
-  position:absolute; width:600px; height:600px; border-radius:50%;
-  background:radial-gradient(circle,var(--electric),transparent 70%);
-  opacity:0.08; filter:blur(80px); top:50%; left:50%;
-  transform:translate(-50%,-50%);
-}
+.cta-glow { display:none; }
 .cta-final h2 {
-  font-size:clamp(2.2rem,5vw,4rem); font-weight:900;
+  font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900;
   letter-spacing:-0.03em; margin-bottom:1.2rem;
-  position:relative; z-index:1;
+  color:var(--ink);
 }
-.cta-final h2 .g1 {
-  background:linear-gradient(135deg,var(--flame),var(--electric));
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-  background-clip:text;
+.cta-final h2 .g1 { color:var(--ink); }
+.cta-final p { font-size:1.05rem; color:var(--slate); margin-bottom:2.5rem; max-width:480px; margin-left:auto; margin-right:auto; }
+.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.btn-outline {
+  background:transparent; color:var(--ink);
+  border:2px solid var(--ink); padding:1rem 2.5rem;
+  border-radius:100px; font-weight:600; font-size:1rem;
+  cursor:pointer; text-decoration:none; transition:all 0.25s;
 }
-.cta-final p { font-size:1.1rem; color:rgba(255,255,255,0.5); margin-bottom:2.5rem; position:relative; z-index:1; }
-.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; position:relative; z-index:1; }
+.btn-outline:hover { background:var(--ink); color:#fff; }
 
 /* ── FOOTER ── */
 footer {
@@ -735,38 +760,73 @@ footer {
      PILLARS
      ════════════════════════════════════ -->
 <section class="pillars">
-  <div class="section-eyebrow">Three Pillars of Amazon Intelligence</div>
-  <h2 class="pillars-title">Everything you need to win on Amazon — in one platform</h2>
+  <div class="section-eyebrow">The intelligence layer the keyword tools don't have</div>
+  <h2 class="pillars-title">What buyers say in reviews — is the signal Helium 10 and Jungle Scout can't give you.</h2>
   <div class="pillars-grid">
     <div class="pillar-card pc-1">
       <div class="pillar-icon">🔍</div>
-      <h3>Understand Demand</h3>
-      <p>Mine 2B+ reviews to find exactly what customers love, hate, and desperately want — before you source a single unit.</p>
+      <h3>Understand Real Demand</h3>
+      <p>Go beyond search volume. See the exact words buyers use to describe frustration, missing features, and unmet needs — pulled from verified purchase reviews across your category, at scale.</p>
       <div class="pillar-tags">
-        <span class="pillar-tag">Pain Point Mining</span>
+        <span class="pillar-tag">Customer Sentiment</span>
+        <span class="pillar-tag">Pain Point Clusters</span>
         <span class="pillar-tag">Feature Gap Analysis</span>
-        <span class="pillar-tag">Sentiment Trends</span>
       </div>
     </div>
     <div class="pillar-card pc-2">
       <div class="pillar-icon">🛡️</div>
       <h3>Protect Your Brand</h3>
-      <p>Monitor competitor attacks, policy-violating reviews, and brand reputation changes in real time — never get blindsided again.</p>
+      <p>Get alerted when ratings drop, policy-violating reviews appear, or competitors target your ASINs. Automated monitoring across your full catalog — not manual spot checks.</p>
       <div class="pillar-tags">
-        <span class="pillar-tag">Review Alerts</span>
+        <span class="pillar-tag">Rating Drop Alerts</span>
         <span class="pillar-tag">TOS Violation Detection</span>
-        <span class="pillar-tag">Brand Health Score</span>
+        <span class="pillar-tag">Competitor Monitoring</span>
       </div>
     </div>
     <div class="pillar-card pc-3">
       <div class="pillar-icon">🚀</div>
-      <h3>Find Growth Opportunities</h3>
-      <p>Identify whitespace niches, underserved buyer segments, and rising keyword opportunities before the market saturates.</p>
+      <h3>Find Gaps Before They're Obvious</h3>
+      <p>Review patterns reveal unmet needs and rising complaints that keyword rank data alone can't surface. Spot the product gaps your competitors haven't filled — before they do.</p>
       <div class="pillar-tags">
-        <span class="pillar-tag">Niche Discovery</span>
-        <span class="pillar-tag">Keyword Intelligence</span>
-        <span class="pillar-tag">Trend Forecasting</span>
+        <span class="pillar-tag">Unmet Need Signals</span>
+        <span class="pillar-tag">Niche Gap Analysis</span>
+        <span class="pillar-tag">Category Trend Tracking</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     WHO IT'S FOR
+     ════════════════════════════════════ -->
+<section class="who-for">
+  <div class="section-eyebrow">Who It's For</div>
+  <h2 class="who-for-title">Built for every stage of selling</h2>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon">🧪</div>
+      <h4>Product Research</h4>
+      <p>Validate ideas with real consumer sentiment and search demand before you invest a single dollar in inventory.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">✍️</div>
+      <h4>Listing Optimization</h4>
+      <p>Write listings that speak to the exact pain points and desires customers express — in their own words.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🛡️</div>
+      <h4>Brand Protection</h4>
+      <p>Catch unfair reviews, monitor reputation across ASINs, and keep your rating strong automatically.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">⚔️</div>
+      <h4>Competitor Analysis</h4>
+      <p>See exactly what customers love and hate about competing products — and build a better one.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">📊</div>
+      <h4>Market Intelligence</h4>
+      <p>Spot trends, find gaps, and time your launches with data-driven confidence — not gut feel.</p>
     </div>
   </div>
 </section>
@@ -775,20 +835,20 @@ footer {
      FEATURES
      ════════════════════════════════════ -->
 <section class="features" id="features">
-  <div class="section-eyebrow" style="color:var(--electric)">Deep-Dive Features</div>
-  <h2 class="features-title">Built for sellers who make data-driven decisions</h2>
+  <div class="section-eyebrow" style="color:var(--electric)">Features</div>
+  <h2 class="features-title">Everything you need to outsmart the market</h2>
 
   <!-- Feature 1: Review Intelligence -->
   <div class="feature-block">
     <div class="feature-text">
-      <div class="feat-label">Review Intelligence</div>
-      <h3>Turn 50,000 reviews into a 5-bullet product brief</h3>
-      <p>Our AI reads every review in your category and surfaces the signals that matter — what drives 5-star ratings, what triggers 1-star bombs, and what buyers wish existed.</p>
+      <div class="feat-label">Review Intelligence at Scale</div>
+      <h3>Uncover what customers love, hate, and desperately want</h3>
+      <p>Powered by the largest Amazon review database on the market. Go beyond star ratings — understand the real reasons behind purchase decisions, returns, and repeat buys.</p>
       <ul class="feat-bullets">
-        <li>Cluster reviews by theme automatically — no manual tagging</li>
-        <li>Track sentiment velocity: is satisfaction improving or sliding?</li>
-        <li>Extract buyer personas directly from language patterns</li>
-        <li>Benchmark against top 10 competitors in your niche</li>
+        <li>Customer pain points and unmet needs</li>
+        <li>Buying motivations and positive purchase drivers</li>
+        <li>Product improvement opportunities your competitors have missed</li>
+        <li>Niche-level sentiment analysis across thousands of ASINs</li>
       </ul>
     </div>
     <div class="feat-visual">
@@ -821,17 +881,47 @@ footer {
     </div>
   </div>
 
+  <!-- Feature 2: Keyword & Demand Intelligence -->
+  <div class="feature-block">
+    <div class="feature-text">
+      <div class="feat-label" style="color:var(--sun)">AI Keyword & Demand Intelligence</div>
+      <h3>Go beyond search volume. Understand what shoppers actually care about.</h3>
+      <p>Our AI groups Amazon keywords into meaningful demand clusters — so you can see which buyer needs are biggest in any niche, and position your product to win the right segment.</p>
+      <ul class="feat-bullets">
+        <li>AI-powered keyword clustering by buyer intent</li>
+        <li>Search volume & demand segmentation by topic</li>
+        <li>Positioning & product development insights</li>
+        <li>See which clusters competitors dominate — and which are wide open</li>
+      </ul>
+    </div>
+    <div class="feat-visual" style="background:var(--mist)">
+      <div style="padding:1.5rem">
+        <p style="font-size:0.8rem;font-weight:600;color:var(--slate);text-align:center;margin-bottom:1.5rem">Demand Clusters — "Dog Leash"</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;align-items:center">
+          <span style="background:#fde2e2;color:#c0392b;padding:0.5rem 1.1rem;border-radius:100px;font-size:0.85rem;font-weight:500">retractable leash</span>
+          <span style="background:#d5e8f7;color:#1a6fa8;padding:0.5rem 1.4rem;border-radius:100px;font-size:1rem;font-weight:700">small dog leash</span>
+          <span style="background:#e8f5e0;color:#2e7d32;padding:0.5rem 1rem;border-radius:100px;font-size:0.82rem;font-weight:500">heavy duty</span>
+          <span style="background:#f3e5f5;color:#7b1fa2;padding:0.5rem 1.2rem;border-radius:100px;font-size:0.9rem;font-weight:600">hands-free leash</span>
+          <span style="background:#fff3e0;color:#e65100;padding:0.5rem 1rem;border-radius:100px;font-size:0.85rem;font-weight:500">leather leash</span>
+          <span style="background:#e3f2fd;color:#1565c0;padding:0.5rem 1.3rem;border-radius:100px;font-size:0.9rem;font-weight:600">double dog leash</span>
+          <span style="background:#e8f5e0;color:#388e3c;padding:0.5rem 1rem;border-radius:100px;font-size:0.82rem;font-weight:500">reflective</span>
+          <span style="background:#fce4ec;color:#c2185b;padding:0.5rem 1.1rem;border-radius:100px;font-size:0.85rem;font-weight:500">training leash</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Feature 3: Brand Monitoring -->
   <div class="feature-block">
     <div class="feature-text">
-      <div class="feat-label" style="color:var(--cyan)">Brand Protection</div>
-      <h3>Real-time alerts before a bad review becomes a trend</h3>
-      <p>Get notified the moment a review violates Amazon policy, a competitor leaves fake reviews on your listing, or your brand health score drops below your threshold.</p>
+      <div class="feat-label" style="color:var(--cyan)">Review Monitoring & Protection</div>
+      <h3>Track new reviews across your products. Stay ahead of problems.</h3>
+      <p>Get alerted to rating drops, policy violations, and competitor manipulation before they compound. Monitor your full catalog automatically — no manual checking required.</p>
       <ul class="feat-bullets">
-        <li>TOS violation detection with evidence screenshots</li>
-        <li>Competitor manipulation alerts within 24 hours</li>
-        <li>Brand health score tracked weekly with trend indicators</li>
-        <li>One-click report generation for Amazon dispute submissions</li>
+        <li>Instant alerts on rating drops and negative review spikes</li>
+        <li>Policy-violating review detection with evidence capture</li>
+        <li>Competitor review manipulation flagged within 24 hours</li>
+        <li>One-click dispute report generation for Amazon submissions</li>
       </ul>
     </div>
     <div class="feat-visual-dark">
@@ -1105,11 +1195,11 @@ footer {
      ════════════════════════════════════ -->
 <section class="cta-final">
   <div class="cta-glow"></div>
-  <h2>Your competitors are already<br><span class="g1">reading your customers' minds.</span></h2>
-  <p>Get ahead with the largest Amazon review database — and sell on livestream like you've known your customers for years.</p>
+  <h2>Ready to see what your<br><span class="g1">competitors can't?</span></h2>
+  <p>Join thousands of Amazon sellers who use VOC.ai to make smarter product decisions, protect their brand, and grow faster.</p>
   <div class="cta-btns">
-    <a class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem" href="#pricing">Start Free Today →</a>
-    <a class="btn-lime" style="font-size:1rem;padding:1rem 2.5rem" href="#demo">Generate a Free Script</a>
+    <a class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem" href="#pricing">Start Free Trial →</a>
+    <a class="btn-outline" href="#demo">Book a Demo</a>
   </div>
 </section>
 
